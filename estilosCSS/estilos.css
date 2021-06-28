@@ -1,0 +1,199 @@
+@charset "UTF-8";
+@font-face {
+  font-family: oxanium;
+  src: url("fontes/Oxanium-Regular.ttf");
+}
+@font-face {
+  font-family: prometheus;
+  src: url("fontes/PROMETHEUS.ttf");
+}
+@font-face {
+  font-family: nucleo;
+  src: url("fontes/Nucleo.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #191919;
+  font-size: 18px;
+}
+@media (min-width: 570px) {
+  body {
+    font-size: 22px;
+  }
+}
+@media (min-width: 680px) {
+  body {
+    font-size: 26px;
+  }
+}
+h1,h2,h3,h4,h5,p,img,figcaption {
+  font-family: oxanium;
+  color: whitesmoke;
+}
+/*Inicio secção do cabeçalho*/
+header {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+header.bg1 {
+  background-image: url("imagens/Fundo1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/*Inicio secção da barra de navegação*/
+nav.menu {
+  z-index: 5;
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0px;
+  opacity: 1;
+}
+nav.menu ul {
+  position: sticky;
+  display: flex;
+  justify-content: space-around;
+}
+nav.menu li {
+  list-style: none;
+  font-family: oxanium;
+  font-size: 1em;
+}
+nav.menu a {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+nav.menu a:hover {
+  background-color: #ffce00;
+}
+/*Fim da secção da barra de navegação*/
+a {
+  text-decoration: none;
+  color: #000000;
+}
+/*Inicio secção da tela de apresentação*/
+div.text{
+  z-index: 4;
+}
+h1.site-title,.site-subtitle {
+  text-align: center;
+  color: #f1aa00;
+  font-family: nucleo;
+  font-size: 3em;
+  text-shadow: black 2px 2px 2px;
+}
+h2.site-subtitle {
+  font-family: nucleo;
+  font-style: italic;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+/*Fim secção da tela de apresentação*/
+/*Fim secção cabeçalho*/
+
+/*Inicio secção pessoal*/
+section.pessoal {
+  text-shadow: 3px 3px 3px #2b2410;
+  border-top: #504315 1px solid;
+  padding: 1em;
+}
+section.pessoal h2 {
+  margin-top: 0.7em;
+  margin-bottom: 1em;
+  font-size: 2em;  
+}
+section.pessoal div.personal{
+  display: grid;
+  gap: 0.5em;
+}
+section.pessoal div.personal figure {
+  display: flex;
+}
+section.pessoal div.personal figure img.me {
+  border: 1px solid goldenrod;
+  border-radius: 1em;
+}
+section.pessoal div.personal p {
+  font-size: 26px;
+  text-indent: 10%;
+  padding-bottom: 2%;
+  text-align: justify;
+}
+/*Fim secção pessoal*/
+
+
+section.portifolio {
+  padding: 1em;
+}
+section.portifolio h2 {
+  margin-top: 0.7em;
+  margin-bottom: 1em;
+  font-size: 2em;
+  text-shadow: 3px 3px 3px #2b2410;
+}
+section.portifolio div.grid {
+  display: grid;
+  gap: 1em;
+}
+
+@media (min-width: 570px) {
+  section.pessoal div.personal {
+    grid-template-columns: 500px;
+  }
+  section.portifolio {
+    height: 140vh;
+  }
+  section.portifolio div.grid {
+    grid-template-columns: 250px 250px;
+  }
+}
+
+@media (min-width: 860px) {
+  section.pessoal div.personal {
+    grid-template-columns: 55vw 340px;
+    justify-content: center;
+  }
+  section.portifolio{
+    height: 140vh;
+  }
+  section.portifolio div.grid {
+    grid-template-columns: 250px 250px 250px;
+    justify-content: left;
+    align-content: center;
+  }
+}
+
+/*@media (min-width: 1200px) {
+  section.pessoal div.personal {
+    grid-template-columns: 63vw 30vw;
+  }
+}*/
+
+figure {
+  text-align: center;
+}
+img.img-portfolio {
+  height: 160px;
+  width: 250px;
+  border-radius: 250px;
+  border: 3px #f1aa00 solid;
+  opacity: 0.7;
+}
+img.img-portfolio:hover {
+  background-color: lightgray;
+  opacity: 1;
+}
+section.contato a {
+  color: whitesmoke;
+  font-size: 1em;
+}
